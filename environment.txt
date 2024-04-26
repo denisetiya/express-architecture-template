@@ -1,0 +1,2 @@
+DATABASE_URL=postgresql://username:password@serverDB:portDB/DBName?sslmode=verify-full
+PORT=4000
