@@ -1,12 +1,10 @@
-const response = (res, status,message, data, additional) => {
-
+const response = (res, status, message, data, additional) => {
   return res.status(status).json({
     status_code: status,
     message: message,
     data: data,
-    additional : additional
-  })
-  
-}
+    additional: additional,
+  });
+};
 
-export default response
+export default response;

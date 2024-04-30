@@ -2,7 +2,7 @@ import express from "express";
 import cors from "cors";
 import limiter from "express-rate-limit";
 import dotenv from "dotenv";
-import router from './route/index.js'
+import router from "./route/index.js";
 
 dotenv.config();
 
@@ -18,12 +18,11 @@ app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 app.use(express.static("assets"));
 
-
 app.use(router);
 
 // 404 Page Not Found
-app.all('*', (req, res) => {
-  res.json({message: 'page not found'});
+app.all("*", (req, res) => {
+  res.json({ message: "page not found" });
 });
 
 const port = process.env.PORT || 5000;
